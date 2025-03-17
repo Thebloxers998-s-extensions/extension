@@ -365,6 +365,14 @@ SOFTWARE.
         change_wss_url({ URL }) {
             OmegaAuthInstance.rootWsURL = URL;
         }
+        checkError() {
+    return !(
+        this.statusCodes.register === 200 ||
+        this.statusCodes.login === 200 ||
+        this.statusCodes.save === 200 ||
+        this.statusCodes.load === 200
+    );
+        }
 
         async login_account({ EMAIL, PASSWORD }) {
             await OmegaAuthInstance.Login(EMAIL, PASSWORD);
