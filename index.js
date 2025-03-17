@@ -227,6 +227,11 @@ SOFTWARE.
                             },
                         }
                     },
+                    {
+      opcode: 'check_error',
+      blockType: 'Boolean',
+      text: 'Was there an error with the last request?',
+                  },
                     "---",
                     {
                         opcode: 'get_token',
